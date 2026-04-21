@@ -9,4 +9,4 @@ resources:
 # 이미지 태그 관리 (CI의 sed 명령어가 이 부분을 타겟팅함)
 images:
   - name: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/sallijang-backend-user
-    newTag: f247989e2bc2c7dc8603ab55f5ffb9c82b27421b
+    newTag: d45e6c0ae35bf0fb2a3780bbef476b92115a1c60
