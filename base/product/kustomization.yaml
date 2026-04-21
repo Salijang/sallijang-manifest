@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# 관리할 리소스 파일 목록
+resources:
+  - deployment.yaml
+  - service.yaml
+
+# 이미지 태그 관리 (CI의 sed 명령어가 이 부분을 타겟팅함)
+images:
+  - name: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/sallijang-backend-product
+    newTag: latest

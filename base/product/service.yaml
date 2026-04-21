@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-service       # 서비스 간 통신 시 도메인 이름이 됨 (http://product-service)
+spec:
+  selector:
+    app: product              # deployment.yaml의 레이블과 일치해야 함
+  ports:
+    - protocol: TCP
+      port: 80             # 서비스가 외부(클러스터 내)에 노출할 포트
+      targetPort: 8001     # 컨테이너 내부 포트 (deployment와 동일)
+  type: ClusterIP          # MSA 내부 통신용 표준 설정
