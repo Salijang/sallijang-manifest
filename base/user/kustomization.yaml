@@ -13,3 +13,6 @@ images:
   newTag: e024cf1a72c39eb35892ac6a12648b6b355a8cf0
 - name: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/sallijang-backend-user
   newTag: d45e6c0ae35bf0fb2a3780bbef476b92115a1c60
+- name: user-image
+  newName: 594486941613.dkr.ecr.ap-northeast-2.amazonaws.com/sallijang-backend-user
+  newTag: db538e34b36a356c794287c479d2d3105ca2ab5c
