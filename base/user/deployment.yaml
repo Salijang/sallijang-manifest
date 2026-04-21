@@ -18,7 +18,13 @@ spec:
       - name: user-container
         image: user-image  # kustomization.yaml의 name과 일치해야 합니다.
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: DATABASE_URL
         resources:
           requests:
             cpu: "100m"
