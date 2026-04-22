@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: product-deploy        # 서비스별로 고유하게 설정 (product-deploy 등)
+  name: product-deploy
   labels:
-    app: product              # 서비스 식별용 레이블
+    app: product
 spec:
-  replicas: 1              # 초기 배포 시 복제본 수
+  replicas: 1
   selector:
     matchLabels:
       app: product
@@ -14,12 +14,21 @@ spec:
       labels:
         app: product
     spec:
+      serviceAccountName: sallijang-product-sa
       containers:
       - name: product-container
-        # ECR 주소는 kustomization.yaml에서 관리하므로 여기선 기본값 유지
-        image: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/sallijang-backend-product:latest
+        image: product-image
         ports:
-        - containerPort: 8080 # Python 앱이 사용하는 포트 (Dockerfile 확인 필요)
+        - containerPort: 8001
+        env:
+        - name: DB_HOST
+          value: "pickup-dev-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
+        - name: DB_USER
+          value: "adminuser"
+        - name: DB_NAME
+          value: "pickupdb"
+        - name: AWS_REGION
+          value: "ap-northeast-2"
         resources:
           requests:
             cpu: "100m"
