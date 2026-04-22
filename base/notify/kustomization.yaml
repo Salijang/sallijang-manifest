@@ -9,4 +9,4 @@ resources:
 images:
 - name: notify-image
   newName: 594486941613.dkr.ecr.ap-northeast-2.amazonaws.com/sallijang-backend-notify
-  newTag: fb5fd5be1a8a3084f6ac711b660fc3f5766074ae
+  newTag: 21c34699d6dff8ebb2cbf9519cdfb62554b57444
