@@ -9,4 +9,4 @@ resources:
 images:
 - name: frontend-image
   newName: 594486941613.dkr.ecr.ap-northeast-2.amazonaws.com/sallijang-frontend
-  newTag: a82633e31acf23209243b32144101821b21ae0ff
+  newTag: f008104576c96f59e144597445aa551cb4c13987
