@@ -29,6 +29,10 @@ spec:
           value: "pickupdb"
         - name: AWS_REGION
           value: "ap-northeast-2"
+        - name: PRODUCT_SERVICE_URL
+          value: "http://product-service"
+        - name: NOTIFY_SERVICE_URL
+          value: "http://notify-service"
         resources:
           requests:
             cpu: "100m"

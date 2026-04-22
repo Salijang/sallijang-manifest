@@ -29,6 +29,10 @@ spec:
           value: "pickupdb"
         - name: AWS_REGION
           value: "ap-northeast-2"
+        - name: ORDER_SERVICE_URL
+          value: "http://order-service"
+        - name: PRODUCT_SERVICE_URL
+          value: "http://product-service"
         resources:
           requests:
             cpu: "100m"
