@@ -9,4 +9,4 @@ resources:
 images:
 - name: user-image
   newName: 594486941613.dkr.ecr.ap-northeast-2.amazonaws.com/sallijang-backend-user
-  newTag: b94b5c489830cf3922ef94f9561012d84a7d894c
+  newTag: 00fb507e5f159e6d61fac37a305624684ec3dfbf
