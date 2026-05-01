@@ -5,7 +5,7 @@ metadata:
   labels:
     app: order
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: order
@@ -29,10 +29,17 @@ spec:
           value: "pickupdb"
         - name: AWS_REGION
           value: "ap-northeast-2"
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: user-service-secret
+              key: secret-key
         - name: PRODUCT_SERVICE_URL
           value: "http://product-service"
-        - name: NOTIFY_SERVICE_URL
-          value: "http://notify-service"
+        - name: REDIS_URL
+          value: "redis://pickup-dev-redis-001.pickup-dev-redis.n5yr9i.apn2.cache.amazonaws.com:6379"
+        - name: SQS_QUEUE_URL
+          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-dev-reservation-queue"
         resources:
           requests:
             cpu: "100m"
