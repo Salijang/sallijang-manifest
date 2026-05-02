@@ -36,8 +36,10 @@ spec:
               key: secret-key
         - name: PRODUCT_SERVICE_URL
           value: "http://product-service"
+        - name: ORDER_SERVICE_URL
+          value: "http://order-service"
         - name: SQS_QUEUE_URL
-          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-dev-reservation-queue"
+          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-dev-reservation"
         - name: SNS_TOPIC_ARN
           value: "arn:aws:sns:ap-northeast-2:594486941613:pickup-dev-notification"
         resources:
