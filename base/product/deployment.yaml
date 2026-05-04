@@ -36,6 +36,10 @@ spec:
               key: secret-key
         - name: REDIS_URL
           value: "rediss://pickup-dev-redis-001.pickup-dev-redis.n5yr9i.apn2.cache.amazonaws.com:6379"
+        - name: IMAGE_BUCKET_NAME
+          value: "pickup-dev-images"
+        - name: CDN_URL
+          value: "https://cdn.sallijang.shop"
         resources:
           requests:
             cpu: "100m"
