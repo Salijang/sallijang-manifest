@@ -30,7 +30,7 @@ spec:
             name: user-service
             port:
               number: 80
-      - path: /api/v1/wishlist
+      - path: /api/v1/wishlists
         pathType: Prefix
         backend:
           service:
