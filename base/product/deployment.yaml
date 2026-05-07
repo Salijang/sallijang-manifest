@@ -40,7 +40,7 @@ spec:
         - name: CDN_URL
           value: "https://cdn.sallijang.shop"
         - name: BEDROCK_REGION
-          value: "us-east-1"
+          value: "ap-northeast-2"
         - name: BEDROCK_MODEL_ID
           value: "anthropic.claude-3-5-sonnet-20241022-v2:0"
         - name: STOCK_DEDUCT_QUEUE_URL
