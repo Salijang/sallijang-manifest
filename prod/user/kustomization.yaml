@@ -3,3 +3,12 @@ kind: Kustomization
 
 resources:
 - ../../base/user
+
+patches:
+- patch: |-
+    - op: replace
+      path: /metadata/annotations/eks.amazonaws.com~1role-arn
+      value: "arn:aws:iam::594486941613:role/pickup-prod-user-sa-role"
+  target:
+    kind: ServiceAccount
+    name: sallijang-user-sa
