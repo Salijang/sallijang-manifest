@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notify-deploy
+spec:
+  template:
+    spec:
+      containers:
+      - name: notify-container
+        env:
+        - name: DB_HOST
+          value: "pickup-prod-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
+        - name: REDIS_URL
+          value: "rediss://master.pickup-prod-redis.n5yr9i.apn2.cache.amazonaws.com:6379"
+        - name: SQS_QUEUE_URL
+          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-reservation"
+        - name: SNS_TOPIC_ARN
+          value: "arn:aws:sns:ap-northeast-2:594486941613:pickup-prod-notification"

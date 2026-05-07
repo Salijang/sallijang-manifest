@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-deploy
+spec:
+  template:
+    spec:
+      containers:
+      - name: user-container
+        env:
+        - name: DB_HOST
+          value: "pickup-prod-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"

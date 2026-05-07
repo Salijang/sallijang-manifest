@@ -12,3 +12,6 @@ patches:
   target:
     kind: ServiceAccount
     name: sallijang-order-sa
+
+patchesStrategicMerge:
+- patch-deployment.yaml

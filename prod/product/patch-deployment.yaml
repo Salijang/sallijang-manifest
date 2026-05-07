@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-deploy
+spec:
+  template:
+    spec:
+      containers:
+      - name: product-container
+        env:
+        - name: DB_HOST
+          value: "pickup-prod-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
+        - name: REDIS_URL
+          value: "rediss://master.pickup-prod-redis.n5yr9i.apn2.cache.amazonaws.com:6379"
+        - name: IMAGE_BUCKET_NAME
+          value: "pickup-prod-images"
+        - name: STOCK_DEDUCT_QUEUE_URL
+          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-stock-deduct"
+        - name: STOCK_RESULT_QUEUE_URL
+          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-stock-result"
