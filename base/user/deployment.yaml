@@ -22,7 +22,7 @@ spec:
         - containerPort: 8000
         env:
         - name: DB_HOST
-          value: "pickup-dev-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
+          value: "pickup-prod-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
         - name: DB_USER
           value: "adminuser"
         - name: DB_NAME

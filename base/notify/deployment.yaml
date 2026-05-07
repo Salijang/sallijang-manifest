@@ -22,7 +22,7 @@ spec:
         - containerPort: 8003
         env:
         - name: DB_HOST
-          value: "pickup-dev-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
+          value: "pickup-prod-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
         - name: DB_USER
           value: "adminuser"
         - name: DB_NAME
@@ -39,11 +39,11 @@ spec:
         - name: ORDER_SERVICE_URL
           value: "http://order-service"
         - name: REDIS_URL
-          value: "rediss://pickup-dev-redis-001.pickup-dev-redis.n5yr9i.apn2.cache.amazonaws.com:6379"
+          value: "rediss://master.pickup-prod-redis.n5yr9i.apn2.cache.amazonaws.com:6379"
         - name: SQS_QUEUE_URL
-          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-dev-reservation"
+          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-reservation"
         - name: SNS_TOPIC_ARN
-          value: "arn:aws:sns:ap-northeast-2:594486941613:pickup-dev-notification"
+          value: "arn:aws:sns:ap-northeast-2:594486941613:pickup-prod-notification"
         resources:
           requests:
             cpu: "100m"

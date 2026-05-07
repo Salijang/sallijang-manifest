@@ -12,6 +12,3 @@ patches:
   target:
     kind: ServiceAccount
     name: sallijang-notify-sa
-
-patchesStrategicMerge:
-- patch-deployment.yaml

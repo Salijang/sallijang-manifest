@@ -21,7 +21,7 @@ spec:
         - containerPort: 8002
         env:
         - name: DB_HOST
-          value: "pickup-dev-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
+          value: "pickup-prod-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
         - name: DB_USER
           value: "adminuser"
         - name: DB_NAME
@@ -36,13 +36,13 @@ spec:
         - name: PRODUCT_SERVICE_URL
           value: "http://product-service"
         - name: REDIS_URL
-          value: "rediss://pickup-dev-redis-001.pickup-dev-redis.n5yr9i.apn2.cache.amazonaws.com:6379"
+          value: "rediss://master.pickup-prod-redis.n5yr9i.apn2.cache.amazonaws.com:6379"
         - name: SQS_QUEUE_URL
-          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-dev-reservation"
+          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-reservation"
         - name: STOCK_DEDUCT_QUEUE_URL
-          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-dev-stock-deduct"
+          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-stock-deduct"
         - name: STOCK_RESULT_QUEUE_URL
-          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-dev-stock-result"
+          value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-stock-result"
         resources:
           requests:
             cpu: "100m"
