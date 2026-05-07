@@ -10,4 +10,4 @@ resources:
 images:
 - name: product-image
   newName: 594486941613.dkr.ecr.ap-northeast-2.amazonaws.com/sallijang-backend-product
-  newTag: cd67d51dc0723c6ed1f740de3b208f20c57b51e6
+  newTag: c703fe6848422cdf32dbefc5d07bcc8926f88e4e
