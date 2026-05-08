@@ -43,6 +43,8 @@ spec:
           value: "ap-northeast-2"
         - name: BEDROCK_MODEL_ID
           value: "apac.anthropic.claude-3-5-sonnet-20240620-v1:0"
+        - name: NOTIFY_SERVICE_URL
+          value: "http://notify-service"
         - name: STOCK_DEDUCT_QUEUE_URL
           value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-stock-deduct"
         - name: STOCK_RESULT_QUEUE_URL
