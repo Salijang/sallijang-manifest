@@ -25,9 +25,9 @@ spec:
         - name: DB_POOL_SIZE
           value: "5"
         - name: DB_MAX_OVERFLOW
-          value: "5"
-        - name: DB_POOL_TIMEOUT
           value: "10"
+        - name: DB_POOL_TIMEOUT
+          value: "30"
         - name: ORDER_SLOW_LOG_MS
           value: "1000"
         - name: DB_HOST
@@ -62,4 +62,4 @@ spec:
             memory: "256Mi"
           limits:
             cpu: "500m"
-            memory: "512Mi"
+            memory: "1Gi"
