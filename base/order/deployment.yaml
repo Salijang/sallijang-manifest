@@ -20,6 +20,16 @@ spec:
         ports:
         - containerPort: 8002
         env:
+        - name: PYTHONFAULTHANDLER
+          value: "1"
+        - name: DB_POOL_SIZE
+          value: "3"
+        - name: DB_MAX_OVERFLOW
+          value: "2"
+        - name: DB_POOL_TIMEOUT
+          value: "3"
+        - name: ORDER_SLOW_LOG_MS
+          value: "1000"
         - name: DB_HOST
           value: "pickup-prod-rds-proxy.proxy-c1ckoyqwsimf.ap-northeast-2.rds.amazonaws.com"
         - name: DB_USER
@@ -43,10 +53,13 @@ spec:
           value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-stock-deduct"
         - name: STOCK_RESULT_QUEUE_URL
           value: "https://sqs.ap-northeast-2.amazonaws.com/594486941613/pickup-prod-stock-result"
+        command: ["sh", "-c"]
+        args:
+        - alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 8002 --loop asyncio --http h11
         resources:
           requests:
-            cpu: "100m"
-            memory: "128Mi"
+            cpu: "200m"
+            memory: "256Mi"
           limits:
             cpu: "500m"
             memory: "512Mi"
