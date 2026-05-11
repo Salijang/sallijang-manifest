@@ -10,4 +10,4 @@ resources:
 images:
 - name: order-image
   newName: 594486941613.dkr.ecr.ap-northeast-2.amazonaws.com/sallijang-backend-order
-  newTag: c4221361d867779e2c5d2d117ad8ff1e3586a67e
+  newTag: 65da9519fc577cacaff7a9349688d14f96635dbe
